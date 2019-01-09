@@ -5,26 +5,20 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import './index.css';
 import Game from './components/game/game.component';
 
-const Dashboard = () => (
-  <div>
-    <h1>
-      Dashboard
-    </h1>
-  </div>
-);
-
 // ========================================
 
 ReactDOM.render(
   <Router>
     <div>
-      <aside>
-        <Link to={`/`}>Dashboard</Link>
-        <Link to={`/tic-tac-toe`}>Tic-Tac-Toe</Link>
-      </aside>
+      <div className="text-center">
+        <h1>React Projects</h1>
+        <aside>
+          <Link className="projects" to={`/`}>Dashboard</Link>
+          <Link className="projects" to={`/tic-tac-toe`}>Tic-Tac-Toe</Link>
+        </aside>
+      </div>
 
       <main>
-        <Route exact path="/" component={Dashboard} />
         <Route path="/tic-tac-toe" component={Game} />
       </main>
     </div>
